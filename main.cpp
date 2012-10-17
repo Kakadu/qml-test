@@ -51,11 +51,15 @@ int main(int argc, char ** argv)
 
     QList<QObject*> lst;
     for (int i = 1; i<=5; ++i) {
-        OCamlItem *l = new OCamlItem(QString(i) );
+        OCamlItem *l = new OCamlItem(QString("%1").arg(i) );
         for (int j = 1; j<=3; ++j) {
             l->addSon( new OCamlItem(QString("%1,%2").arg(i).arg(j)) );
         }
         lst.append(l);
+    }
+    foreach(QObject* o, lst) {
+        OCamlItem *i = dynamic_cast<OCamlItem*>(o);
+        printItem(i->name(), i);
     }
 
     QDeclarativeContext *ctxt = viewer.rootContext();

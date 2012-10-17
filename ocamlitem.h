@@ -2,6 +2,7 @@
 #define OCAMLITEM_H
 
 #include <QObject>
+#include <QDebug>
 
 class OCamlItem : public QObject
 {
@@ -23,5 +24,5 @@ signals:
 public slots:
 
 };
-
+extern void printItem(QString prefix, OCamlItem* item);
 #endif // OCAMLITEM_H

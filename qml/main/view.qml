@@ -18,10 +18,13 @@ Rectangle {
             anchors.bottomMargin: 1
             anchors.leftMargin: 1
             anchors.topMargin: 1
-
+            height: 20
+            width: 40
             ListView {
                 model: modelData.sons
+                orientation: ListView.Vertical
                 delegate: Rectangle {
+
                     Text {
                         text: modelData.name
 
