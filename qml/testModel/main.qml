@@ -5,22 +5,15 @@ Rectangle {
     width: 360
     height: 360
 
-/*    Text {
-        text: qsTr("Hello World")
-        anchors.centerIn: parent
-    }*/
+
     ListView {
         model: mainModel
         spacing: 5
         orientation: ListView.Horizontal
-/*
-        delegate: Rectangle {
-            width: 50
-            height: 20
-            color: "red"
-        }*/
+
+
         delegate: Text {
-            text:"asdf"
+            text: objectName
             Component.onCompleted: console.log("Text created")
         }
         Component.onCompleted: {

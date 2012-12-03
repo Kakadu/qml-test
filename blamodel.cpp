@@ -3,7 +3,14 @@
 BlaModel::BlaModel(QObject *parent) :
     QAbstractListModel(parent)
 {
-    innerData << new QObject()  << new QObject()  << new QObject() ;
+    auto a = new QObject();
+    a->setObjectName("a");
+    auto b = new QObject();
+    b->setObjectName("b");
+    auto c = new QObject();
+    c->setObjectName("c");
+
+    innerData <<  a << b << c;
 }
 
 int BlaModel::rowCount ( const QModelIndex & ) const {

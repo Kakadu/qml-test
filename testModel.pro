@@ -39,3 +39,5 @@ qtcAddDeployment()
 
 HEADERS += \
     blamodel.h
+
+QMAKE_CXXFLAGS += -std=c++0x
