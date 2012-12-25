@@ -43,5 +43,5 @@ HEADERS += \
     dataobject.h \
     minimodel.h \
     MainModel.h
-
+ 
 QMAKE_CXXFLAGS += -std=c++0x
