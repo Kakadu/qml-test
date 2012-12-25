@@ -22,7 +22,13 @@ public:
     Q_INVOKABLE int dataLen() {
         return innerData.count();
     }
-
+    Q_INVOKABLE QList<QString> roles() {
+        QList<QString> ans;
+        foreach(QByteArray b, roleNames().values() ) {
+            ans << QString(b);
+        }
+        return ans;
+    }
     int rowCount ( const QModelIndex & parent  ) const;
     QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const;
 

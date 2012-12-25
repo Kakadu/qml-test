@@ -33,7 +33,7 @@ symbian:TARGET.CAPABILITY += NetworkServices
 SOURCES += main.cpp \
     dataobject.cpp \
     minimodel.cpp \
-    MainModel.cpp \
+    MainModel.cpp
 
 # Please do not modify the following two lines. Required for deployment.
 include(qmlapplicationviewer/qmlapplicationviewer.pri)
@@ -42,6 +42,6 @@ qtcAddDeployment()
 HEADERS += \
     dataobject.h \
     minimodel.h \
-    MainModel.h 
+    MainModel.h
 
 QMAKE_CXXFLAGS += -std=c++0x

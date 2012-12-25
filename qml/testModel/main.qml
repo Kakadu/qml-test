@@ -9,7 +9,19 @@ Rectangle {
         spacing: 5
         anchors.fill: parent
         orientation: ListView.Vertical
-        //property alias model1: model
+
+        delegate: Text {
+            text: "1"
+
+            Component.onCompleted: {
+                console.log(mainModel);
+                console.log(mainModel.roles() );
+                console.log(model);
+                console.log(model.homm);
+                console.log(homm);
+            }
+        }
+        /*
         delegate: ListView {
             model: homm
             height: 30
@@ -19,6 +31,7 @@ Rectangle {
                 //text: name + " " + sort
                 text: "asfd"//model.name + " " + model.sort
                 width: 50
+                height: 30
 
                 Component.onCompleted: console.log("Text created")
             }
@@ -28,6 +41,7 @@ Rectangle {
                 //console.log(homm.itemsCount());
             }
         }
+        */
         Component.onCompleted: {
             console.log("Items count = " + mainModel.dataLen() );
         }
